@@ -1955,7 +1955,7 @@
 
     .line 672
     .local v8, "mNotificationMgr":Landroid/app/NotificationManager;
-    const v3, 0x1040458
+    sget v3, Lcom/flyme/internal/R$string;->low_internal_storage_view_title:I
 
     invoke-virtual {v0, v3}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 
@@ -1967,7 +1967,7 @@
 
     if-eqz v3, :cond_2
 
-    const v3, 0x1040459
+    const v3, #android:string@low_internal_storage_view_text#t
 
     :goto_1
     invoke-virtual {v0, v3}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
@@ -1990,7 +1990,7 @@
 
     invoke-direct {v1, v0}, Landroid/app/Notification$Builder;-><init>(Landroid/content/Context;)V
 
-    const v3, 0x108064f
+    const v3, #android:drawable@stat_notify_disk_full#t
 
     invoke-virtual {v1, v3}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
 
@@ -2004,7 +2004,7 @@
 
     move-result-object v3
 
-    const v5, 0x1060058
+    const v5, #android:color@system_notification_accent_color#t
 
     invoke-virtual {v3, v5}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -2106,7 +2106,7 @@
     .restart local v8    # "mNotificationMgr":Landroid/app/NotificationManager;
     .restart local v10    # "title":Ljava/lang/CharSequence;
     :cond_2
-    const v3, 0x104045a
+    const v3, #android:string@low_internal_storage_view_text_no_boot#t
 
     goto :goto_1
 
@@ -2316,46 +2316,37 @@
 
     move-result-object v2
 
-    .line 774
     .local v2, "intent":Landroid/app/PendingIntent;
     new-instance v5, Landroid/app/Notification;
 
     invoke-direct {v5}, Landroid/app/Notification;-><init>()V
 
-    .line 776
     .local v5, "notification":Landroid/app/Notification;
-    const v1, 0x108064f
+    const v1, #android:drawable@stat_notify_disk_full#t
 
-    .line 777
     .local v1, "icon":I
     iput v1, v5, Landroid/app/Notification;->icon:I
 
-    .line 778
     iput-object v10, v5, Landroid/app/Notification;->tickerText:Ljava/lang/CharSequence;
 
-    .line 779
     const-wide/16 v12, 0x0
 
     iput-wide v12, v5, Landroid/app/Notification;->when:J
 
-    .line 780
     iget v11, v5, Landroid/app/Notification;->flags:I
 
     or-int/lit8 v11, v11, 0x2
 
     iput v11, v5, Landroid/app/Notification;->flags:I
 
-    .line 781
     const/4 v11, 0x1
 
     iput v11, v5, Landroid/app/Notification;->visibility:I
 
-    .line 782
     const-string v11, "sys"
 
     iput-object v11, v5, Landroid/app/Notification;->category:Ljava/lang/String;
 
-    .line 786
     const-string v11, "System"
 
     invoke-static {v11}, Lcom/android/server/storage/DeviceStorageMonitorService;->getCustomizationReader(Ljava/lang/String;)Lcom/htc/customization/HtcCustomizationReader;
@@ -2420,34 +2411,30 @@
 
     move-result-object v12
 
-    const v13, 0x10900cf
+    const v13, #android:layout@status_bar_latest_event_content#t
 
     invoke-direct {v11, v12, v13}, Landroid/widget/RemoteViews;-><init>(Ljava/lang/String;I)V
 
     iput-object v11, v5, Landroid/app/Notification;->contentView:Landroid/widget/RemoteViews;
 
-    .line 796
     iget-object v11, v5, Landroid/app/Notification;->contentView:Landroid/widget/RemoteViews;
 
-    const v12, 0x1020006
+    const v12, #android:id@icon#t
 
     invoke-virtual {v11, v12, v1}, Landroid/widget/RemoteViews;->setImageViewResource(II)V
 
-    .line 797
     iget-object v11, v5, Landroid/app/Notification;->contentView:Landroid/widget/RemoteViews;
 
-    const v12, 0x1020016
+    const v12, #android:id@title#t
 
     invoke-virtual {v11, v12, v10}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
 
-    .line 798
     iget-object v11, v5, Landroid/app/Notification;->contentView:Landroid/widget/RemoteViews;
 
-    const v12, 0x1020068
+    const v12, #android:id@text#t
 
     invoke-virtual {v11, v12, v0}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
 
-    .line 799
     iput-object v2, v5, Landroid/app/Notification;->contentIntent:Landroid/app/PendingIntent;
 
     goto :goto_0

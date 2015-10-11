@@ -1243,7 +1243,7 @@
 
     .line 932
     .local v5, "r":Landroid/content/res/Resources;
-    const v8, 0x112007b
+    const v8, #android:bool@config_sms_force_7bit_encoding#t
 
     invoke-virtual {v5, v8}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -3266,19 +3266,16 @@
     .locals 1
 
     .prologue
-    .line 1678
-    invoke-static {}, Landroid/telephony/SmsMessage;->useCdmaFormatForMoSms()Z
+    invoke-static {}, Landroid/telephony/SmsMessage;->isCdmaVoice()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1679
     new-instance v0, Lcom/android/internal/telephony/cdma/SmsMessage;
 
     invoke-direct {v0}, Lcom/android/internal/telephony/cdma/SmsMessage;-><init>()V
 
-    .line 1681
     :goto_0
     return-object v0
 
@@ -3853,28 +3850,23 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 2014
     sget-boolean v4, Landroid/telephony/SmsMessage;->mIsNoEmsSupportConfigListLoaded:Z
 
     if-nez v4, :cond_1
 
-    .line 2015
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    .line 2016
     .local v2, "r":Landroid/content/res/Resources;
     if-eqz v2, :cond_1
 
-    .line 2017
-    const v4, 0x1070038
+    const v4, #android:array@no_ems_support_sim_operators#t
 
     invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
     move-result-object v1
 
-    .line 2019
     .local v1, "listArray":[Ljava/lang/String;
     if-eqz v1, :cond_0
 

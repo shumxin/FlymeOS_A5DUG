@@ -1312,7 +1312,7 @@
 
     move-result-object v0
 
-    const v1, 0x1120043
+    const v1, #android:bool@config_voice_capable#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -1408,7 +1408,7 @@
 
     move-result-object v0
 
-    const v1, 0x10e0004
+    const v1, #android:integer@config_soundEffectVolumeDb#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -1464,7 +1464,7 @@
 
     move-result-object v0
 
-    const v1, 0x1120063
+    const v1, #android:bool@config_camera_sound_forced#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -1682,7 +1682,7 @@
 
     move-result-object v0
 
-    const v1, 0x10e006f
+    const v1, #android:integer@config_safe_media_volume_index#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -1699,7 +1699,7 @@
 
     move-result-object v0
 
-    const v1, 0x1120068
+    const v1, #android:bool@config_useFixedVolume#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -1952,7 +1952,7 @@
 
     move-result-object v0
 
-    const v1, 0x1120010
+    const v1, #android:bool@config_useMasterVolume#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -1968,7 +1968,7 @@
 
     move-result-object v0
 
-    const v1, 0x107000b
+    const v1, #android:array@config_masterVolumeRamp#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getIntArray(I)[I
 
@@ -4474,6 +4474,8 @@
 
     move-result v0
 
+    const/4 v0, 0x0
+
     if-eqz v0, :cond_1
 
     .line 1143
@@ -4887,14 +4889,30 @@
     :pswitch_0
     if-ne p2, v3, :cond_1
 
+    iget-boolean v2, p0, Landroid/media/AudioService;->mHasVibrator:Z
+
+    if-eqz v2, :cond_flyme_0
+
+    if-gt p3, p1, :cond_0
+
+    mul-int/lit8 v2, p3, 0x2
+
+    if-ge p1, v2, :cond_0
+
+    const/4 v1, 0x1
+
+    goto :goto_0
+
+    :cond_flyme_0
+
     .line 3570
     if-gt p1, p3, :cond_1
 
     .line 3571
-    const/4 v1, 0x0
+    #const/4 v1, 0x0
 
     .line 3572
-    and-int/lit8 v0, v0, -0x2
+    #and-int/lit8 v0, v0, -0x2
 
     .line 3578
     :cond_1
@@ -4922,13 +4940,27 @@
 
     .line 3600
     :pswitch_1
+    iget-boolean v2, p0, Landroid/media/AudioService;->mHasVibrator:Z
+
+    if-nez v2, :cond_flyme_1
+
+    goto :goto_0
+
+    :cond_flyme_1
+
     and-int/lit8 v0, v0, -0x2
+
+    if-ne p2, v3, :cond_flyme_2
+
+    goto :goto_0
+
+    :cond_flyme_2
 
     .line 3603
     if-ne p2, v4, :cond_0
 
     .line 3604
-    const/4 v1, 0x0
+    const/4 v1, 0x2
 
     goto :goto_0
 
@@ -4939,8 +4971,10 @@
     .line 3624
     if-ne p2, v4, :cond_2
 
+    or-int/lit16 v0, v0, 0x80
+
     .line 3625
-    const/4 v1, 0x2
+    #const/4 v1, 0x2
 
     .line 3626
     :cond_2
@@ -4951,7 +4985,7 @@
     if-ne p2, v3, :cond_0
 
     .line 3627
-    const/4 v1, 0x1
+    #const/4 v1, 0x1
 
     goto :goto_0
 
@@ -7760,7 +7794,7 @@
 
     move-result-object v0
 
-    const v1, 0x1120063
+    const v1, #android:bool@config_camera_sound_forced#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -9147,7 +9181,7 @@
 
     move-result-object v11
 
-    const v12, 0x1110001
+    const v12, #android:xml@audio_assets#t
 
     invoke-virtual {v11, v12}, Landroid/content/res/Resources;->getXml(I)Landroid/content/res/XmlResourceParser;
 
@@ -10071,7 +10105,7 @@
 
     move-result-object v1
 
-    const v2, 0x10e006f
+    const v2, #android:integer@config_safe_media_volume_index#t
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -10098,7 +10132,7 @@
 
     move-result-object v1
 
-    const v2, 0x1120061
+    const v2, #android:bool@config_safe_media_volume_enabled#t
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -11395,8 +11429,12 @@
     :cond_0
     if-nez p2, :cond_2
 
+    iget-boolean v1, p0, Landroid/media/AudioService;->mHasVibrator:Z
+
+    if-eqz v1, :cond_2
+
     .line 1379
-    const/4 v0, 0x0
+    const/4 v0, 0x1
 
     .line 1384
     .local v0, "newRingerMode":I
@@ -12134,6 +12172,8 @@
     invoke-static {v4}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
 
     move-result v5
+
+    const/4 v5, 0x0
 
     iput-boolean v5, p0, Landroid/media/AudioService;->mEnableListenNotify:Z
 

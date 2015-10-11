@@ -597,6 +597,16 @@
 
     iget-object v2, v0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
+    iget-object v3, v0, Lcom/android/server/notification/NotificationManagerService$7;->val$notification:Landroid/app/Notification;
+
+    move-object/from16 v4, v16
+
+    invoke-virtual {v2, v3, v14, v1, v4}, Lcom/android/server/notification/NotificationManagerService;->hookEnqueueNotification(Landroid/app/Notification;Lcom/android/server/notification/NotificationRecord;Landroid/service/notification/StatusBarNotification;Lcom/android/server/notification/NotificationRecord;)V
+
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/android/server/notification/NotificationManagerService$7;->this$0:Lcom/android/server/notification/NotificationManagerService;
+
     move-object/from16 v0, v16
 
     # invokes: Lcom/android/server/notification/NotificationManagerService;->buzzBeepBlinkLocked(Lcom/android/server/notification/NotificationRecord;)V

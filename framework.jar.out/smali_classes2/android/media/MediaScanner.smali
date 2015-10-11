@@ -1433,14 +1433,12 @@
 
     iput-object v0, p0, Landroid/media/MediaScanner;->mExternalStoragePath:Ljava/lang/String;
 
-    .line 473
     invoke-static {}, Landroid/os/Environment;->isExternalStorageEmulated()Z
 
     move-result v0
 
     iput-boolean v0, p0, Landroid/media/MediaScanner;->mExternalIsEmulated:Z
 
-    .line 476
     iget-object v0, p0, Landroid/media/MediaScanner;->mContext:Landroid/content/Context;
 
     const-string v1, "storage"
@@ -1462,7 +1460,8 @@
 
     iput-object v0, p0, Landroid/media/MediaScanner;->mExternalStoragePaths:[Ljava/lang/String;
 
-    .line 479
+    invoke-direct/range {p0 .. p0}, Landroid/media/MediaScanner;->mzSetLocaleIfNeeded()V
+
     return-void
 .end method
 
@@ -1471,7 +1470,6 @@
     .param p0, "x0"    # Landroid/media/MediaScanner;
 
     .prologue
-    .line 132
     iget-boolean v0, p0, Landroid/media/MediaScanner;->mCaseInsensitivePaths:Z
 
     return v0
@@ -1482,7 +1480,6 @@
     .param p0, "x0"    # Landroid/media/MediaScanner;
 
     .prologue
-    .line 132
     iget-boolean v0, p0, Landroid/media/MediaScanner;->mExternalIsEmulated:Z
 
     return v0
@@ -1493,7 +1490,6 @@
     .param p0, "x0"    # Landroid/media/MediaScanner;
 
     .prologue
-    .line 132
     iget-object v0, p0, Landroid/media/MediaScanner;->mExternalStoragePath:Ljava/lang/String;
 
     return-object v0
@@ -1507,9 +1503,9 @@
     .param p3, "x3"    # Landroid/media/MediaScannerClient;
 
     .prologue
-    .line 132
     invoke-direct {p0, p1, p2, p3}, Landroid/media/MediaScanner;->processFile(Ljava/lang/String;Ljava/lang/String;Landroid/media/MediaScannerClient;)V
 
+    .line 479
     return-void
 .end method
 
@@ -3348,6 +3344,10 @@
     .locals 11
 
     .prologue
+    const/4 v10, 0x0
+
+    return v10
+
     .line 1699
     const/4 v8, 0x0
 
@@ -5726,7 +5726,7 @@
 
     iget-object v1, p0, Landroid/media/MediaScanner;->mHTCTypeChangeCache:Ljava/util/HashMap;
 
-    invoke-direct {p0, v0, v1}, Landroid/media/MediaScanner;->updateHtcType(Landroid/net/Uri;Ljava/util/HashMap;)V
+    #invoke-direct {p0, v0, v1}, Landroid/media/MediaScanner;->updateHtcType(Landroid/net/Uri;Ljava/util/HashMap;)V
 
     .line 2121
     iget-object v0, p0, Landroid/media/MediaScanner;->mHTCTypeChangeCache:Ljava/util/HashMap;
@@ -11321,4 +11321,75 @@
 
     .line 535
     return-void
+.end method
+
+.method private mzSetLocaleIfNeeded()V
+    .locals 5
+
+    .prologue
+    iget-object v3, p0, Landroid/media/MediaScanner;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object v3
+
+    iget-object v2, v3, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
+
+    .local v2, "locale":Ljava/util/Locale;
+    if-eqz v2, :cond_0
+
+    invoke-virtual {v2}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
+
+    move-result-object v1
+
+    .local v1, "language":Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/util/Locale;->getCountry()Ljava/lang/String;
+
+    move-result-object v0
+
+    .local v0, "country":Ljava/lang/String;
+    if-eqz v1, :cond_0
+
+    if-eqz v0, :cond_1
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, "_"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {p0, v3}, Landroid/media/MediaScanner;->setLocale(Ljava/lang/String;)V
+
+    .end local v0    # "country":Ljava/lang/String;
+    .end local v1    # "language":Ljava/lang/String;
+    :cond_0
+    :goto_0
+    return-void
+
+    .restart local v0    # "country":Ljava/lang/String;
+    .restart local v1    # "language":Ljava/lang/String;
+    :cond_1
+    invoke-virtual {p0, v1}, Landroid/media/MediaScanner;->setLocale(Ljava/lang/String;)V
+
+    goto :goto_0
 .end method
