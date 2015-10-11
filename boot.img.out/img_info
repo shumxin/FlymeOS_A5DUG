@@ -1,0 +1,14 @@
+kernel=kernel
+ramdisk=RAMDISK
+dt=dt.img
+page_size=2048
+kernel_size=6129216
+ramdisk_size=1126661
+dtb_size=944128
+base_addr=0x00000000
+kernel_offset=0x00008000
+ramdisk_offset=0x02000000
+tags_offset=0x01e00000
+cmd_line='console=ttyHSL0,115200,n8 androidboot.hardware=qcom user_debug=30 ehci-hcd.park=3'
+board=""
+format=gzip
