@@ -56,7 +56,8 @@ vendor_modify_images := boot
 #-----------------------------------------------------------------------------
 vendor_saved_apps := Bluetooth KeyChain HTMLViewer UserDictionaryProvider BackupRestoreConfirmation \
                      FusedLocation PrintSpooler SharedStorageBackup  ExternalStorageProvider InputDevices \
-                     ProxyHandler Shell DefaultContainerService
+                     ProxyHandler Shell DefaultContainerService FMRadioService WifiRouter FM_Radio \
+                     Stk_DD_DS Tag
 
 ##############################################################################
 # The value decides which vendor apk you want to modify.
@@ -88,7 +89,7 @@ vendor_modify_jars := android.policy framework services telephony-common wifi-se
 # The default value is nothing.
 # You can configure the board system file path which relative to the system directory in the board release.
 #-----------------------------------------------------------------------------
-board_saved_files := lib/libwebviewchromium.so
+board_saved_files := bin/bootanimation bin/shutdownanimation lib/libwebviewchromium.so media/bootanimation.zip
 
 ##############################################################################
 # The value decides which board system apk you want to remove.
@@ -107,7 +108,7 @@ board_saved_files := lib/libwebviewchromium.so
 # The command idtoname how to use: first use "apktool d source/system/framework/framework-res.apk other/TMP/framework-res",
 # and then use "idtoname other/TMP/framework-res/res/values/public_master.xml XXXX/smali"(XXXX is the directory where you decode board system apk).
 #-----------------------------------------------------------------------------
-#board_modify_apps := TeleService
+board_modify_apps := TeleService SystemUI FlymeLauncher
 
 ##############################################################################
 # The value decides which jar you want to modify, when the jar is based on the board framework jar.
@@ -180,4 +181,5 @@ override_property += \
 #PRODUCE_BLOCK_BASED_OTA := true
 
 
+include $(PWD)/vendor.remove.mk
 include $(PORT_BUILD)/main.mk
