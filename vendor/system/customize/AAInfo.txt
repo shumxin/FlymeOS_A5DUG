@@ -1,0 +1,6 @@
+TaskID : 447188
+Project : A5_DUG_L50_DESIRE_SENSE60_MR
+SKU : HTCCN CHS CU[1402]
+ROM Ver : 2.34.1402.3
+Customization Id : 1088025
+RCMS Id : 94

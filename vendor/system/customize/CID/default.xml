@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<customization_form>
+  <category name="system">
+    <module name="locale">
+      <function>
+        <set name="single">
+          <item name="total_list">en_US;zh_CN;zh_TW;</item>
+          <item type="boolean" name="en_US">yes</item>
+          <item type="boolean" name="zh_CN">yes</item>
+          <item type="boolean" name="zh_TW">yes</item>
+        </set>
+      </function>
+    </module>
+    <module name="defaultTime1224">
+      <function>
+        <set name="single">
+          <item name="default">24</item>
+        </set>
+      </function>
+    </module>
+    <module name="deviceData">
+      <function>
+        <set name="single">
+          <item name="device_name">HTC D816w</item>
+        </set>
+      </function>
+    </module>
+    <module name="deviceData1">
+      <function>
+        <set name="single">
+          <item name="sw_number">1.0.0.D816w</item>
+        </set>
+      </function>
+    </module>
+  </category>
+  <category name="application">
+    <module name="Crash_Report">
+      <function name="setting">
+        <set name="single">
+          <item name="turn_off_report" type="boolean">no</item>
+          <item name="turn_off_application_log" type="boolean">no</item>
+        </set>
+      </function>
+    </module>
+    <module name="Phone">
+      <function name="ip_dial">
+        <set name="single">
+          <item name="enabled">true</item>
+          <item name="operator">46000:46001:46002:46007</item>
+          <item name="number1">17911</item>
+          <item name="number2">10193</item>
+          <item name="number3">12593</item>
+          <item name="number4">17951</item>
+        </set>
+      </function>
+      <function name="MVNO_SPN">
+        <set name="single">
+          <item name="carrier name">CMCC</item>
+          <item name="mccmnc">46000,46002,46007,46008</item>
+          <item name="spnname">阿里通信,Alibaba</item>
+        </set>
+        <set name="single">
+          <item name="carrier name">CU</item>
+          <item name="mccmnc">46001,46009</item>
+          <item name="spnname">阿里通信,Alibaba</item>
+        </set>
+        <set name="single">
+          <item name="carrier name">CT</item>
+          <item name="mccmnc">46003,46011,46012,20404,45404</item>
+          <item name="spnname">阿里通信,Alibaba</item>
+        </set>
+      </function>
+    </module>
+    <module name="OOBE">
+      <function name="Step_Config">
+        <set name="single">
+          <item name="Location_Consent" type="boolean">yes</item>
+          <item name="Dropbox" type="boolean">no</item>
+        </set>
+      </function>
+      <function name="Data_Connection_Config">
+        <set name="single">
+          <item name="Show_Mobile" type="boolean">yes</item>
+        </set>
+      </function>
+      <function name="Account_Config">
+        <set name="single">
+          <item name="GMail" type="boolean">no</item>
+        </set>
+      </function>
+      <!--%%File%%-->
+    </module>
+  </category>
+  <BootConfiguration>
+    <BootAnimation animation="/system/customize/resource/CU_bootup_animation.zip" audio="/system/customize/resource/CU_bootup_music.mp3" audiostart="CU" />
+  </BootConfiguration>
+  <ShutdownConfiguration>
+    <ShutdownAnimation image_png="/system/customize/resource/CU_shutdown_animation.zip" image="" fps="9" audio="/system/customize/resource/CU_shutdown_music.mp3" useAudio="1" />
+  </ShutdownConfiguration>
+  <category name="SettingsProvider">
+    <module name="res">
+      <function name="values">
+        <set name="single">
+          <item name="def_screen_off_timeout">-2</item>
+          <item name="def_install_non_market_apps">0</item>
+          <item name="def_htc_mobile_network_on">true</item>
+          <item name="def_2g_on">2</item>
+          <item name="def_volume_ring">6</item>
+        </set>
+      </function>
+    </module>
+  </category>
+  <category name="Settings">
+    <module name="list">
+      <function name="blocked_applications">
+        <set name="single">
+          <item name="0">com.alipay.android.app</item>
+          <item name="2">com.sohu.newsclient</item>
+          <item name="4">com.baidu.searchbox_htc</item>
+          <item name="6">com.intsig.BizCardReader</item>
+          <item name="7">com.youdao.dict</item>
+        </set>
+      </function>
+      <function name="hide_application_list">
+        <set name="single">
+          <item name="0">com.lmi.htc.rescue</item>
+          <item name="1">com.lmi.htc.rescuesecurity</item>
+        </set>
+      </function>
+    </module>
+    <module name="properties">
+      <function>
+        <set name="single">
+          <item name="market_name">HTC D816w</item>
+        </set>
+      </function>
+      <function>
+        <set name="single">
+          <item name="support_font_size_huge">true</item>
+        </set>
+      </function>
+    </module>
+  </category>
+  <category name="AutomotiveHome">
+    <module name="setting">
+      <function>
+        <set name="single">
+          <item name="default_Location">Autonavi</item>
+        </set>
+      </function>
+    </module>
+  </category>
+  <category name="ACC">
+    <module name="Software_Update_FOTA">
+      <function name="settings">
+        <set>
+          <item name="support_enablehgc" type="boolean">true</item>
+        </set>
+      </function>
+    </module>
+  </category>
+</customization_form>

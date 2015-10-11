@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<allApplication>
+  <customize_sort>
+    <!--19de8d27-2672-4fc4-99f6-45d8d0417bb1-->
+    <item type="application" packageName="com.htc.sense.woactivity" className="com.htc.sense.woactivity.Wo3GActivity" display_order="2" display_hide="0" />
+    <!--cff12227-0d79-49f4-adf1-69af7929cb55-->
+    <item type="application" packageName="com.infinit.wostore.ui" className="com.infinit.wostore.ui.BeginActivity" display_order="4" display_hide="0" />
+    <!--c1f1e8fb-5dd3-4758-8363-f4eaf996ed66-->
+    <item type="application" packageName="com.sinovatech.unicom.ui" className="com.sinovatech.unicom.ui.WelcomeClient" display_order="6" display_hide="0" />
+    <!--a69089ac-8863-4a89-b9f8-bfa67700c8c4-->
+    <item type="application" packageName="com.htc.android.mail" className="com.htc.android.mail.MultipleActivitiesMain" display_order="10" display_hide="0" />
+    <!--da5ca291-eede-4a0b-9b41-e6cd96045519-->
+    <item type="application" packageName="com.htc.calendar" className="com.htc.calendar.CalendarActivityMain" display_order="20" display_hide="0" />
+    <!--a9f61e65-049e-46a8-93e9-f6d3db92f3d8-->
+    <item type="application" packageName="com.htc.contacts" className="com.htc.contacts.BrowseLayerCarouselActivity" display_order="30" display_hide="0" />
+    <!--abf947fd-3ef1-4d24-94f6-52d6c905747d-->
+    <item type="application" packageName="com.htc.cn.voice" className="com.htc.cn.voice.MainActivity" display_order="40" display_hide="0" />
+    <!--747740c8-4c38-408f-b650-d24a0865163d-->
+    <item type="application" packageName="com.htc.album" className="com.htc.album.AlbumMain.ActivityMainTabHost" display_order="50" display_hide="0" />
+    <!--4951be68-5d9f-486d-900e-de7202dc00e7-->
+    <item type="application" packageName="com.htcmarket" className="com.htc.android.sense.activity.HelpActivity" display_order="70" display_hide="0" />
+    <!--197fd6a1-643c-42b5-b251-39949f676df9-->
+    <item type="application" packageName="com.socogame.ppc" className="com.socogame.ppc.PlayPlusClientActivity" display_order="90" display_hide="0" />
+    <!--b68de3d6-2bb9-46b7-87d4-03be5859af5d-->
+    <item type="application" packageName="com.htc.videohub.ui" className="com.htc.videohub.ui.MainForwardingActivity" display_order="100" display_hide="0" />
+    <!--0b50e399-3d2e-4c01-95dd-3eec5b2da39f-->
+    <item type="application" packageName="com.htc.AutoMotive" className="com.htc.AutoMotive.carousel.MainActivity" display_order="110" display_hide="0" />
+    <!--69f2cf4e-3a8a-4328-bb85-b2f8b80a3b16-->
+    <item type="application" packageName="com.htc.android.worldclock" className="com.htc.android.worldclock.WorldClockTabControl" display_order="120" display_hide="0" />
+    <!--0392bbd2-ca4e-4c27-8e00-6629cc95b1d9-->
+    <item type="application" packageName="com.htc.stock" className="com.htc.stock.ui.HomeActivity" display_order="130" display_hide="0" />
+    <!--345376f6-4280-42f9-98f4-0f3c7f04655d-->
+    <item type="application" packageName="com.android.settings" className="com.android.settings.Settings" display_order="160" display_hide="0" />
+    <!--80357547-4425-4d8c-b555-7ff0456b19f4-->
+    <item type="application" packageName="com.htc.showme" className="com.htc.showme.ui.MainPage" display_order="180" display_hide="0" />
+    <!--61a14f07-a346-4679-b089-dabd5727825e-->
+    <item type="application" packageName="com.neusoft.td.android.wo116114" className="com.neusoft.td.android.wo116114.activity.StartActivity" display_order="190" display_hide="0" />
+    <!--b2230201-f1ef-4f8b-9206-f7563ae7a98c-->
+    <item type="application" packageName="com.asiainfo.android" className="com.asiainfo.android.MainActivity" display_order="200" display_hide="0" />
+    <!--d084d1d1-d66b-4309-83fe-dff89fc8053a-->
+    <item type="application" packageName="com.htc.china.videos" className="com.htc.china.videos.SplashActivity" display_order="5" container="Media" />
+    <!--cae33bb6-7cb6-44d0-bc6a-90a2a964e065-->
+    <item type="application" packageName="com.htc.music" className="com.htc.music.browserlayer.MusicBrowserTabActivity" display_order="15" container="Media" />
+    <!--a81b36b6-f569-483f-b499-65bd36641596-->
+    <item type="application" packageName="com.htc.fm" className="com.htc.fm.ap.activity.FMRadioMain" display_order="75" container="Media" />
+    <!--29f29b11-3b3a-4a76-95b6-1a624ae5d945-->
+    <item type="application" packageName="com.tencent.mm" className="com.tencent.mm.ui.LauncherUI" display_order="5" container="推荐" />
+    <!--3c39059f-7140-46f2-9e8f-eefca5ed9ac8-->
+    <item type="application" packageName="com.sina.weibo" className="com.sina.weibo.SplashActivity" display_order="15" container="推荐" />
+    <!--c145883e-9d14-4b43-a451-fca007dc403e-->
+    <item type="application" packageName="com.sohu.newsclient" className="com.sohu.newsclient.app.SplashActivity" display_order="45" container="推荐" />
+    <!--a88c03cb-d9c8-4b05-860e-a5866cea0e80-->
+    <item type="application" packageName="com.baidu.searchbox_htc" className="com.baidu.searchbox.MainActivity" display_order="55" container="推荐" />
+    <!--5957d1f3-e405-4414-9e92-7b8936605b19-->
+    <item type="application" packageName="com.infraware.docmaster" className="com.infraware.polarisoffice5.OfficeHomeActivity" display_order="45" container="Productivity" />
+    <!--9272aee8-9f3c-4c96-87cb-57d214faffb6-->
+    <item type="application" packageName="com.htc.lucy" className="com.htc.lucy.editor.LandingActivity" display_order="55" container="Productivity" />
+    <!--ca03085c-c0f6-4864-a938-46bcf1f1af20-->
+    <item type="application" packageName="com.htc.task" className="com.htc.task.TaskListViewActivity" display_order="65" container="Productivity" />
+    <!--d8e54ce8-e471-4804-8e2a-aceb7aaf2699-->
+    <item type="application" packageName="com.youdao.dict" className="com.youdao.dict.activity.DictSplashActivity" display_order="95" container="Productivity" />
+    <!--d980757a-74d9-4feb-b9b5-bf10b9adb682-->
+    <item type="application" packageName="com.htc.calculator" className="com.htc.calculator.Calculator" display_order="5" container="Tools" />
+    <!--bd40f9f5-a8f6-4db5-849f-feede1c165d2-->
+    <item type="application" packageName="com.htc.htccnfilemanager" className="com.htc.htccnfilemanager.htccnFileManager" display_order="10" container="Tools" />
+    <!--ad8f2c72-db45-494f-9c19-b968e5001019-->
+    <item type="application" packageName="com.htc.flashlight" className="com.htc.flashlight.FlashlightActivity" display_order="15" container="Tools" />
+    <!--b12ab714-f7fe-46a5-8fee-26001fab1a8c-->
+    <item type="application" packageName="com.htc.Weather" className="com.htc.Weather.WeatherEntry" display_order="25" container="Tools" />
+    <!--dc25cdd3-e9fd-4639-bbcb-d835bd31e52b-->
+    <item type="application" packageName="com.android.providers.downloads.ui" className="com.android.providers.downloads.ui.DownloadList" display_order="35" container="Tools" />
+    <!--bc37092e-125f-47fc-9ca5-afb1c44e5476-->
+    <item type="application" packageName="com.htc.android.htcsetupwizard" className="com.htc.android.htcsetupwizard.SetupWizardActivity" display_order="45" container="Tools" />
+    <!--b8160352-b35e-4007-a712-6f46b9a80aa4-->
+    <item type="application" packageName="com.htc.soundrecorder" className="com.htc.soundrecorder.SoundRecorderBG" display_order="55" container="Tools" />
+    <!--0343e488-6237-4827-87ef-1241870c76cb-->
+    <item type="folder" folder_id="Media" folder_title="Media" display_order="60" />
+    <!--c85ce91b-1c89-4b87-8d61-bd53f3a22c26-->
+    <item type="folder" folder_id="推荐" folder_title="推荐" display_order="80" />
+    <!--f17e4f3e-3b11-4104-bce5-4ddbae654dda-->
+    <item type="folder" folder_id="Productivity" folder_title="Productivity" display_order="140" />
+    <!--488949b3-266f-4694-b44b-247ff81d681c-->
+    <item type="folder" folder_id="Tools" folder_title="Tools" display_order="150" />
+  </customize_sort>
+</allApplication>

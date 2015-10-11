@@ -1,0 +1,5 @@
+﻿Project: A5_DUG_L50_DESIRE_SENSE60_MR
+SKU: HTCCN CU ROM
+ROM Build ID: 1088025
+Build ID: 1088026; SKU: HTCCN CU ROM default; CID: default; MNS: default
+Datetime: 2015/06/17 16:27:59
