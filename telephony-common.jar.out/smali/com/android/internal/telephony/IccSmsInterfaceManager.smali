@@ -461,7 +461,7 @@
 
     .prologue
     .line 97
-    invoke-direct {p0, p1}, Lcom/android/internal/telephony/IccSmsInterfaceManager;->removeAllIccSms(Z)V
+    #invoke-direct {p0, p1}, Lcom/android/internal/telephony/IccSmsInterfaceManager;->removeAllIccSms(Z)V
 
     return-void
 .end method
@@ -901,7 +901,7 @@
 
     .line 1351
     :cond_0
-    invoke-direct {p0, v0}, Lcom/android/internal/telephony/IccSmsInterfaceManager;->removeAllIccSms(Z)V
+    #invoke-direct {p0, v0}, Lcom/android/internal/telephony/IccSmsInterfaceManager;->removeAllIccSms(Z)V
 
     goto :goto_0
 .end method

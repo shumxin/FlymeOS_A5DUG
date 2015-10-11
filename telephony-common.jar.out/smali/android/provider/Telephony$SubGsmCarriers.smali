@@ -24,7 +24,7 @@
 
     .prologue
     .line 3575
-    const-string v0, "content://subgsmapn/carriers"
+    const-string v0, "content://telephony/carriers"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
