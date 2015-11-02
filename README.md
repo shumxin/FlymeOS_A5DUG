@@ -9,3 +9,5 @@ The Flyme Project for HTC Desire 816W
 3. thanks @zoujunhua86(the developer of FlymeOS project)
 
 4. thanks @IcyMe(the provider of ruu for D816w)
+
+5. thanks @Flar2(the author of wp_mod.ko)
