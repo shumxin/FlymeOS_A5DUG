@@ -1,6 +1,6 @@
-# Flyme_Patchrom_A5DUG
+# FlymeOS_A5DUG
 
-The Flyme Project for HTC Desire 816W
+The Flyme OS Project for HTC Desire 816W
 
 1. based on A5_DUG_L50_DESIRE_SENSE60_MR 2.34.1402.3
 
